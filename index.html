@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><Laraarthur class="shop"></Laraarthur></title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 60px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #00000044;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background: #ffffff22;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #e91e63;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    audio {
+      display: block;
+      margin: 20px auto;
+    }
+    #contador {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #0d0d0d;
+      background-color: #000;
+      padding: 30px;
+      border: 6px solid #e91e63;
+      border-radius: 20px;
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      font-family: 'Courier New', Courier, monospace;
+      color: #f55;
+      text-shadow: 0 0 5px #f55, 0 0 10px #f55;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+    .particle {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+      z-index: 1000;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio  id="bgmusic" autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador nao suporta o áudio
+  </audio>
+
+  <header>
+    <h1>Lara & Eu</h1>
+    <nav>
+      <a href="#historia">Nossa História</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#carta">Carta</a>
+      <a href="#musica">Nossa Música</a>
+    </nav>
+    <div id="contador"></div>
+  </header>
+
+  <section id="historia">
+    <h2>Nossa História</h2>
+    <p>
+      Tudo começou há quase 2 Anos... desde então, cada dia ao seu lado tem sido uma nova aventura cheia de amor, companheirismo e carinho. Você transformou minha vida e me mostrou o verdadeiro significado de estar com alguém que a gente ama de verdade.
+    </p>
+  </section>
+
+  <section id="fotos">
+    <h2>Nossas Fotos</h2>
+    <div class="gallery">
+      <img src="WhatsApp Image 2025-06-09 at 13.36.34.jpeg" alt="Foto 1">
+      <img src="WhatsApp Image 2025-06-09 at 13.38.55.jpeg" alt="Foto 2">
+      <img src="WhatsApp Image 2025-06-09 at 13.43.49.jpeg" alt="Foto 3">
+    </div>
+  </section>
+
+  <section id="carta">
+    <h2>Minha Carta pra Você</h2>
+    <p>
+      Lara,
+      <br><br>
+      Hoje eu quis fazer algo diferente. Criar um cantinho só nosso, onde cada detalhe fosse sobre você, sobre nós, sobre tudo o que construímos nesses últimos 2 Anos.
+      <br><br>
+      Cada momento com você é uma lembrança que eu quero guardar pra sempre. Seu sorriso, seu carinho, suas palavras… tudo em você me faz querer ser alguém melhor.
+      <br><br>
+      Obrigado por me escolher todos os dias, por estar ao meu lado, por fazer meu mundo mais leve e mais bonito.
+      <br><br>
+      Te amo mais do que qualquer palavra pode dizer. Esse site é só uma forma pequena de mostrar um amor tão grande que cresce a cada dia.
+      <br><br>
+      Com todo o meu amor,<br>
+      Arthur Fábio ❤❤
+    </p>
+  </section>
+
+  <section id="musica.mp3">
+    <h2>Nossa Música</h2>
+    <p><strong>Aliança - Tribalistas</strong></p>
+
+  </section>
+
+  <footer>
+    Feito com ❤️ para Lara
+  </footer>
+
+  <script>
+    const inicio = new Date("2023-11-12T19:00:00");
+    const contador = document.getElementById("contador");
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diferenca = agora - inicio;
+
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      const horas = String(Math.floor((diferenca / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+      const minutos = String(Math.floor((diferenca / (1000 * 60)) % 60)).padStart(2, '0');
+      const segundos = String(Math.floor((diferenca / 1000) % 60)).padStart(2, '0');
+
+      contador.innerHTML = `
+        <div style="font-size: 18px; margin-bottom: 10px;">Estamos juntos há</div>
+        <div style="font-size: 36px; letter-spacing: 2px; font-family: 'Courier New', Courier, monospace;">
+          ${dias}d : ${horas}h : ${minutos}m : ${segundos}s
+        </div>
+        <div style="font-size: 16px; margin-top: 10px;">e contando... ❤️</div>
+      `;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+    function criarParticula() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      const tipo = Math.random() < 0.5 ? 'heart' : 'rose';
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.top = '-50px';
+      particle.style.backgroundImage = tipo === 'heart' ? "url('https://cdn-icons-png.flaticon.com/512/833/833472.png')" : "url('https://cdn-icons-png.flaticon.com/512/477/477779.png')";
+      particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      document.body.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 10000);
+    }
+
+    setInterval(criarParticula, 500);
+  </script>
+</body>
+</html>
